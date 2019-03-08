@@ -1,0 +1,10 @@
+<div *ngFor="let product of products; index as i">
+  <a [routerLink]="['/products',i]">{{product.name}}</a>
+
+  <div *ngIf="product.coupon" [title]="product.coupon + '%'">{{product.coupon}} % off</div>
+  <div (click)="greatDeal(product)">?</div>
+  <app-comparison [product]="product"
+  (interest)="logInterest($event)"></app-comparison>
+  <button (click)="cart.add(product)">Buy</button>
+
+</div>

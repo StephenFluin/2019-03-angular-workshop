@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+app-product-list>div {
+  margin:16px;
+  width:300px;
+  border:1px solid #CCC;
+}
